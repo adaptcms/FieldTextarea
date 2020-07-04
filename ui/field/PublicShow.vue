@@ -10,7 +10,7 @@ export default {
     'value',
     'field',
     'model',
-    'module',
+    'package',
     'action'
   ]
 }
