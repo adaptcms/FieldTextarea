@@ -60,5 +60,12 @@ MIT. Please see the [license file](license.md) for more information.
 
 #### Include layout in Vue page view
 
-```import Layout from '../../../../../adaptcms/base/ui/layouts/layout'``
+```import Layout from '@/Adaptcms/Base/ui/layouts/AdminLayout'``
+
+or
+
+```import Layout from '@/Adaptcms/Site/ui/layouts/layout'```
+
+and
+
 ```layout: (h, page) => h(Layout, [ page ]),```
