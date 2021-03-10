@@ -52,4 +52,20 @@ class FieldTextarea extends FieldType
   {
     return nl2br($value);
   }
+
+  /**
+  * Set Value
+  *
+  * @param mixed $value
+  *
+  * @return void
+  */
+  public function setValue($value)
+  {
+    if ($value === 'null') {
+      $value = null;
+    }
+
+    return $value;
+  }
 }
