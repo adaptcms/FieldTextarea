@@ -7,15 +7,19 @@
 <script>
 export default {
   props: [
-    'value',
+    'modelValue',
     'field',
     'package',
     'errors',
     'fields'
   ],
 
+  emits: [
+    'update:modelValue'
+  ],
+
   watch: {
-    value (newVal, oldVal) {
+    modelValue (newVal, oldVal) {
       if (newVal !== oldVal) {
         this.selected = newVal
       }
@@ -23,7 +27,7 @@ export default {
 
     selected (newVal, oldVal) {
       if (newVal !== oldVal) {
-        this.$emit('input', newVal)
+        this.$emit('update:modelValue', newVal)
       }
     }
   },
@@ -35,8 +39,8 @@ export default {
   },
 
   mounted () {
-    if (this.value) {
-      this.selected = this.value
+    if (this.modelValue) {
+      this.selected = this.modelValue
     }
   }
 }
